@@ -24,14 +24,14 @@ public class Board {
 		return columns;
 	}
 
-	// declarando metados
+	// declarando metados para rertona linha e colunas
 	public Piece piece(int row, int column) {
 		if (!positionExists(row, column)) {
 			throw new BoardException("Position not on the board");
 		}
 		return pieces[row][column]; // Retonando a matriz pieces
 	}
-
+	// declarando metados para retornando posição
 	public Piece piece(Position position) {
 		if (!positionExists(position)) {
 			throw new BoardException("Position not on the board");

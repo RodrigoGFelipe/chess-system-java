@@ -8,7 +8,7 @@ public class Program {
 
 		// Declarando o objeto da classe
 		ChessMatch chessmatch = new ChessMatch();
-		// Declarando uma classe UI
+		// função para imprimir as peças da partida
 		UI.printBoard(chessmatch.getPieces()); // metado recebera a pecas da partida
 	}
 

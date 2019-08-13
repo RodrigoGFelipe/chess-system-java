@@ -6,16 +6,16 @@ import chess.pieces.King;
 import chess.pieces.Rook;
 
 public class ChessMatch {
-	private Board board;
+	private Board board; //Declarando objeto da classe Board
 
 	// Construtor padrao
 	public ChessMatch() {
-		board = new Board(8, 8);
+		board = new Board(8, 8); 
 		inicialSetup();
 
 	}
 
-	// Metado para retorna as peças do xadrez
+	// Metado para retorna a matriz das peças do xadrez
 	public ChessPiece[][] getPieces() {
 		ChessPiece[][] mat = new ChessPiece[board.getRows()][board.getColumns()];
 		for (int i = 0; i < board.getRows(); i++) {
