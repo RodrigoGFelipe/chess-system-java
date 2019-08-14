@@ -47,12 +47,25 @@ public class Board {
 		piece.position = position;
 
 	}
+	
+	public Piece removePiece(Position position) {
+		if (!positionExists(position)) { // Se a posicao não existe notificara com exception
+			throw new BoardException("Position not on the board");
+		}
+		if (piece(position) == null) {
+			return null;
+		}
+		Piece aux = piece(position);
+		aux.position = null;
+		pieces[position.getRow()][position.getColumn()] = null;
+		return aux;
+	}
 
 	// Declarando o metado para verificar se a posição da peça existe
 	public boolean positionExists(int row, int column) {
 		return row >= 0 && row < rows && column >= 0 && column < columns;
 	}
-
+	// reaprovaitando o primeiro metado
 	public boolean positionExists(Position position) {
 		return positionExists(position.getRow(), position.getColumn());
 	}
